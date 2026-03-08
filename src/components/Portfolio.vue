@@ -6,24 +6,26 @@ const sectionRef = ref(null)
 const cardsRef = ref([])
 
 const softwareProjects = [
-  { id: 1, title: 'Sistem Cuaca Terpadu', category: 'Web App', image: 'public/porto/Cuaca.png', description: 'Dashboard monitoring cuaca real-time.' },
-  { id: 2, title: 'Mini Game Retro', category: 'Web App', image: 'public/porto/MiniGame.png', description: 'Eksplorasi nostalgia klasik dibalut dengan teknologi Web modern.' },
-  { id: 3, title: 'Qibla', category: 'Mobile App', image: 'public/porto/Qibla.png', description: 'Aplikasi berbasis Flutter dengan keakuratan kompas tinggi.' },
-  { id: 4, title: 'MyGudang', category: 'Mobile App', image: 'public/porto/MyGudang.png', description: 'Sistem manajemen gudang digital.' },
-  { id: 5, title: 'SiGaji', category: 'Mobile App', image: 'public/porto/SiGaji.png', description: 'Slip gaji digital dengan chatbot AI.' },
-  { id: 6, title: 'Katalog Korporat', category: 'Web App', image: 'public/porto/Enp.png', description: 'Profile UMKM sederhana dengan katalog sederhana.' },
-  { id: 7, title: 'SainzLab', category: 'Web App', image: 'public/porto/SainzLab.jpg', description: 'Profile Perusahaan dengan katalog cerdas.' },
-  { id: 8, title: 'MyProfile', category: 'Web App', image: 'public/porto/Profile.png', description: 'Personal Profile sederhana.' },
-  { id: 9, title: 'eSip', category: 'Web App', image: 'https://placehold.co/600x800/5a67d8/FFFFFF?text=coming soon', description: 'Earsip enterprise terintegrasi dengan kecerdasan buatan.' }
+  { id: 1, title: 'Sistem Cuaca Terpadu', category: 'Web App', image: 'public/porto/Cuaca.png', description: 'Dashboard monitoring cuaca real-time.', link: 'https://weather.sainzlab.my.id/' },
+  { id: 2, title: 'Mini Game Retro', category: 'Web App', image: 'public/porto/MiniGame.png', description: 'Eksplorasi nostalgia klasik dibalut dengan teknologi Web modern.', link: 'https://minigame.sainz.fun/' },
+  { id: 3, title: 'Qibla', category: 'Mobile App', image: 'public/porto/Qibla.png', description: 'Aplikasi berbasis Flutter dengan keakuratan kompas tinggi.', link: 'https://github.com/SainzLab/Kompas-Kiblat/' },
+  { id: 4, title: 'MyGudang', category: 'Mobile App', image: 'public/porto/MyGudang.png', description: 'Sistem manajemen gudang digital.', link: 'https://github.com/SainzLab/MyGudang/' },
+  { id: 5, title: 'SiGaji', category: 'Mobile App', image: 'public/porto/SiGaji.png', description: 'Slip gaji digital dengan chatbot AI.', link: 'https://github.com/SainzLab/mobile-slipgaji/' },
+  { id: 6, title: 'Katalog Korporat', category: 'Web App', image: 'public/porto/Enp.png', description: 'Profile UMKM sederhana dengan katalog sederhana.', link: 'http://enp.sainzlab.my.id/' },
+  { id: 7, title: 'SainzLab', category: 'Web App', image: 'public/porto/SainzLab.jpg', description: 'Profile Perusahaan dengan katalog cerdas.', link: 'https://sainzlab.my.id/' },
+  { id: 8, title: 'MyProfile', category: 'Web App', image: 'public/porto/Profile.png', description: 'Personal Profile sederhana.', link: 'https://profile.sainzlab.my.id/' },
+  { id: 9, title: 'eSip', category: 'Web App', image: 'https://placehold.co/600x800/5a67d8/FFFFFF?text=coming soon', description: 'Earsip enterprise terintegrasi dengan kecerdasan buatan.', link: 'https://github.com/SainzLab/eSIP-FE' }
 ]
 
 const devopsProjects = [
-  { id: 101, title: 'Cluster Kubernetes', category: 'Cloud ', image: 'public/porto/Kubernetes-logo.jpg', description: 'Orkestrasi microservices pada cluster kubernetes.' },
-  { id: 102, title: 'Proxmox Virtual Environment', category: 'Server Admin', image: 'public/porto/Proxmox-logo.jpg', description: 'Manajemen server lokal dengan VM dan LXC.' },
-  { id: 103, title: 'Docker Container', category: 'Cloud', image: 'public/porto/Docker-Logo.png', description: 'Manajemen Container.' },
-  { id: 104, title: 'VM Terraform Automation', category: 'IaC', image: 'public/porto/terraform-logo.jpg', description: 'Setup VM dengan terraform.' },
-  { id: 105, title: 'LXC Terraform Automation', category: 'IaC', image: 'public/porto/terraform-logo.jpg', description: 'Setup LXC dengan terraform.' },
-  { id: 103, title: 'Bot AFK Discord', category: 'Script', image: 'public/porto/discord_logo.jpg', description: 'Bot Discord.' }
+  { id: 101, title: 'Cluster Kubernetes', category: 'Cloud ', image: 'public/porto/Kubernetes-logo.jpg', description: 'Orkestrasi microservices pada cluster kubernetes.', link: '#' },
+  { id: 102, title: 'Proxmox Virtual Environment', category: 'Server Admin', image: 'public/porto/Proxmox-logo.jpg', description: 'Manajemen server lokal dengan VM dan LXC.', link: '#' },
+  { id: 103, title: 'Docker Container', category: 'Cloud', image: 'public/porto/Docker-Logo.png', description: 'Manajemen Container.', link: '#' },
+  { id: 104, title: 'VM Terraform Automation', category: 'IaC', image: 'public/porto/terraform-logo.jpg', description: 'Setup VM dengan terraform.', link: 'https://github.com/SainzLab/terraform-vm/' },
+  { id: 105, title: 'LXC Terraform Automation', category: 'IaC', image: 'public/porto/terraform-logo.jpg', description: 'Setup LXC dengan terraform.', link: 'https://github.com/SainzLab/terraform-lxc/' },
+  { id: 106, title: 'Bot AFK Discord', category: 'Script', image: 'public/porto/discord_logo.jpg', description: 'Bot Discord.', link: 'https://github.com/SainzLab/script-afk-discord/' },
+  { id: 104, title: 'Automation setup Wazuh', category: 'IaC', image: 'https://placehold.co/600x800/5a67d8/FFFFFF?text=coming soon', description: 'Setup Wazuh server menggunakan ansible dan terraform.', link: '#' },
+  { id: 105, title: 'Automation setup Docker', category: 'IaC', image: 'https://placehold.co/600x800/5a67d8/FFFFFF?text=coming soon', description: 'Setup Docker container menggunakan ansible dan terraform.', link: '#' }
 ]
 
 onMounted(() => {
@@ -51,10 +53,13 @@ onMounted(() => {
     </div>
 
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 relative z-10 mb-20">
-      <div 
+      <a 
         v-for="project in softwareProjects" 
         :key="project.id" 
-        class="group relative overflow-hidden rounded-2xl bg-gray-900 border border-white/5 transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_20px_40px_-10px_rgba(255,255,255,0.05)] cursor-pointer"
+        :href="project.link"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="group relative overflow-hidden rounded-2xl bg-gray-900 border border-white/5 transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_20px_40px_-10px_rgba(255,255,255,0.05)] cursor-pointer block"
       >
       
         <div class="relative w-full aspect-[4/3] overflow-hidden">
@@ -80,7 +85,7 @@ onMounted(() => {
             {{ project.description }}
           </p>
         </div>
-      </div>
+      </a>
     </div>
 
     <div class="mb-8">
@@ -93,10 +98,13 @@ onMounted(() => {
     </div>
 
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 relative z-10">
-      <div 
+      <a 
         v-for="project in devopsProjects" 
         :key="project.id" 
-        class="group relative overflow-hidden rounded-2xl bg-gray-900 border border-white/5 transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_20px_40px_-10px_rgba(255,255,255,0.05)] cursor-pointer"
+        :href="project.link"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="group relative overflow-hidden rounded-2xl bg-gray-900 border border-white/5 transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_20px_40px_-10px_rgba(255,255,255,0.05)] cursor-pointer block"
       >
         <div class="relative w-full aspect-[4/3] overflow-hidden">
           <div class="absolute inset-0 bg-black/40 group-hover:bg-transparent transition-colors duration-500 z-10"></div>
@@ -121,7 +129,7 @@ onMounted(() => {
             {{ project.description }}
           </p>
         </div>
-      </div>
+      </a>
     </div>
 
   </section>
