@@ -6,24 +6,24 @@ const sectionRef = ref(null)
 const cardsRef = ref([])
 
 const softwareProjects = [
-  { id: 1, title: 'Sistem Cuaca Terpadu', category: 'Web App', image: 'public/porto/Cuaca.png', description: 'Dashboard monitoring cuaca real-time.', link: 'https://weather.sainzlab.my.id/' },
-  { id: 2, title: 'Mini Game Retro', category: 'Web App', image: 'public/porto/MiniGame.png', description: 'Eksplorasi nostalgia klasik dibalut dengan teknologi Web modern.', link: 'https://minigame.sainz.fun/' },
-  { id: 3, title: 'Qibla', category: 'Mobile App', image: 'public/porto/Qibla.png', description: 'Aplikasi berbasis Flutter dengan keakuratan kompas tinggi.', link: 'https://github.com/SainzLab/Kompas-Kiblat/' },
-  { id: 4, title: 'MyGudang', category: 'Mobile App', image: 'public/porto/MyGudang.png', description: 'Sistem manajemen gudang digital.', link: 'https://github.com/SainzLab/MyGudang/' },
-  { id: 5, title: 'SiGaji', category: 'Mobile App', image: 'public/porto/SiGaji.png', description: 'Slip gaji digital dengan chatbot AI.', link: 'https://github.com/SainzLab/mobile-slipgaji/' },
+  { id: 1, title: 'Sistem Cuaca Terpadu', category: 'Web App', image: '/public/porto/Cuaca.png', description: 'Dashboard monitoring cuaca real-time.', link: 'https://weather.sainzlab.my.id/' },
+  { id: 2, title: 'Mini Game Retro', category: 'Web App', image: '/public/porto/MiniGame.png', description: 'Eksplorasi nostalgia klasik dibalut dengan teknologi Web modern.', link: 'https://minigame.sainz.fun/' },
+  { id: 3, title: 'Qibla', category: 'Mobile App', image: '/public/porto/Qibla.png', description: 'Aplikasi berbasis Flutter dengan keakuratan kompas tinggi.', link: 'https://github.com/SainzLab/Kompas-Kiblat/' },
+  { id: 4, title: 'MyGudang', category: 'Mobile App', image: '/public/porto/MyGudang.png', description: 'Sistem manajemen gudang digital.', link: 'https://github.com/SainzLab/MyGudang/' },
+  { id: 5, title: 'SiGaji', category: 'Mobile App', image: '/public/porto/SiGaji.png', description: 'Slip gaji digital dengan chatbot AI.', link: 'https://github.com/SainzLab/mobile-slipgaji/' },
   { id: 6, title: 'Katalog Korporat', category: 'Web App', image: 'public/porto/Enp.png', description: 'Profile UMKM sederhana dengan katalog sederhana.', link: 'http://enp.sainzlab.my.id/' },
-  { id: 7, title: 'SainzLab', category: 'Web App', image: 'public/porto/SainzLab.jpg', description: 'Profile Perusahaan dengan katalog cerdas.', link: 'https://sainzlab.my.id/' },
-  { id: 8, title: 'MyProfile', category: 'Web App', image: 'public/porto/Profile.png', description: 'Personal Profile sederhana.', link: 'https://profile.sainzlab.my.id/' },
+  { id: 7, title: 'SainzLab', category: 'Web App', image: '/public/porto/SainzLab.jpg', description: 'Profile Perusahaan dengan katalog cerdas.', link: 'https://sainzlab.my.id/' },
+  { id: 8, title: 'MyProfile', category: 'Web App', image: '/public/porto/Profile.png', description: 'Personal Profile sederhana.', link: 'https://profile.sainzlab.my.id/' },
   { id: 9, title: 'eSip', category: 'Web App', image: 'https://placehold.co/600x800/5a67d8/FFFFFF?text=coming soon', description: 'Earsip enterprise terintegrasi dengan kecerdasan buatan.', link: 'https://github.com/SainzLab/eSIP-FE' }
 ]
 
 const devopsProjects = [
-  { id: 101, title: 'Cluster Kubernetes', category: 'Cloud ', image: 'public/porto/Kubernetes-logo.jpg', description: 'Orkestrasi microservices pada cluster kubernetes.', link: '#' },
-  { id: 102, title: 'Proxmox Virtual Environment', category: 'Server Admin', image: 'public/porto/Proxmox-logo.jpg', description: 'Manajemen server lokal dengan VM dan LXC.', link: '#' },
-  { id: 103, title: 'Docker Container', category: 'Cloud', image: 'public/porto/Docker-Logo.png', description: 'Manajemen Container.', link: '#' },
-  { id: 104, title: 'VM Terraform Automation', category: 'IaC', image: 'public/porto/terraform-logo.jpg', description: 'Setup VM dengan terraform.', link: 'https://github.com/SainzLab/terraform-vm/' },
-  { id: 105, title: 'LXC Terraform Automation', category: 'IaC', image: 'public/porto/terraform-logo.jpg', description: 'Setup LXC dengan terraform.', link: 'https://github.com/SainzLab/terraform-lxc/' },
-  { id: 106, title: 'Bot AFK Discord', category: 'Script', image: 'public/porto/discord_logo.jpg', description: 'Bot Discord.', link: 'https://github.com/SainzLab/script-afk-discord/' },
+  { id: 101, title: 'Cluster Kubernetes', category: 'Cloud ', image: '/public/porto/Kubernetes-logo.jpg', description: 'Orkestrasi microservices pada cluster kubernetes.', link: '#' },
+  { id: 102, title: 'Proxmox Virtual Environment', category: 'Server Admin', image: '/public/porto/Proxmox-logo.jpg', description: 'Manajemen server lokal dengan VM dan LXC.', link: '#' },
+  { id: 103, title: 'Docker Container', category: 'Cloud', image: '/public/porto/Docker-Logo.png', description: 'Manajemen Container.', link: '#' },
+  { id: 104, title: 'VM Terraform Automation', category: 'IaC', image: '/public/porto/terraform-logo.jpg', description: 'Setup VM dengan terraform.', link: 'https://github.com/SainzLab/terraform-vm/' },
+  { id: 105, title: 'LXC Terraform Automation', category: 'IaC', image: '/public/porto/terraform-logo.jpg', description: 'Setup LXC dengan terraform.', link: 'https://github.com/SainzLab/terraform-lxc/' },
+  { id: 106, title: 'Bot AFK Discord', category: 'Script', image: '/public/porto/discord_logo.jpg', description: 'Bot Discord.', link: 'https://github.com/SainzLab/script-afk-discord/' },
   { id: 104, title: 'Automation setup Wazuh', category: 'IaC', image: 'https://placehold.co/600x800/5a67d8/FFFFFF?text=coming soon', description: 'Setup Wazuh server menggunakan ansible dan terraform.', link: '#' },
   { id: 105, title: 'Automation setup Docker', category: 'IaC', image: 'https://placehold.co/600x800/5a67d8/FFFFFF?text=coming soon', description: 'Setup Docker container menggunakan ansible dan terraform.', link: '#' }
 ]
