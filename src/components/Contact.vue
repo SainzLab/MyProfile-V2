@@ -256,7 +256,7 @@ onUnmounted(() => {
         saya selalu terbuka untuk mendiskusikan proyek dan peluang baru.
       </p>
 
-      <a href="mailto:hello@example.com" class="inline-block relative group">
+      <a href="mailto:muhammadfazli@sainzlab.my.id" class="inline-block relative group">
         <div class="absolute -inset-1 bg-cyan-500/20 rounded-full blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
         
         <MagneticButton relative z-10>
